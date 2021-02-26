@@ -1,4 +1,5 @@
 import requests
+import json
 
 from keys import key
 
@@ -9,6 +10,8 @@ headers = {
     'x-rapidapi-host': "wordsapiv1.p.rapidapi.com"
     }
 
-response = requests.request("GET", url + "no", headers=headers)
+def get_word(word):
+    response = requests.request("GET", url + word, headers=headers)
+    return(json.loads(response.text))
 
-print(response.text)
+print(get_word("Hello"))

@@ -1,3 +1,7 @@
+#Hi
+
+#Word API stuff
+
 import requests
 import json
 
@@ -14,4 +18,34 @@ def get_word(word):
     response = requests.request("GET", url + word, headers=headers)
     return(json.loads(response.text))
 
-print(get_word("Hello"))
+#Paper generation
+
+def generate_paper(reference_text):
+    #parsed_ref = parse_reference_text(reference_text)
+    #generate_thesis(parsed_ref)
+    pass
+
+def generate_thesis():
+    pass
+
+def generate_intro():
+    pass
+
+def generate_body():
+    pass
+
+def generate_conclusion():
+    pass
+
+#Misc
+
+def parse_reference_text(): #Just get stuff that makes good quotes
+    pass
+
+#Begin
+import sys
+
+if len(sys.argv) == 1:
+    generate_paper(str(argv[1]))
+else:
+    pass

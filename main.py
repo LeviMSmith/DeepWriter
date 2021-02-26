@@ -21,11 +21,11 @@ def get_word(word):
 #Paper generation
 
 def generate_paper(reference_text):
-    #parsed_ref = parse_reference_text(reference_text)
-    #generate_thesis(parsed_ref)
+    parsed_ref = parse_reference_text(reference_text)
+    generate_thesis(parsed_ref)
     pass
 
-def generate_thesis():
+def generate_thesis(parsed_ref):
     pass
 
 def generate_intro():
@@ -39,13 +39,14 @@ def generate_conclusion():
 
 #Misc
 
-def parse_reference_text(): #Just get stuff that makes good quotes
-    pass
+def parse_reference_text(ref_txt): #Just get stuff that makes good quotes (eventually)
+    f = open(ref_txt, 'r')
+    return(f)
 
 #Begin
 import sys
 
 if len(sys.argv) == 1:
-    generate_paper(str(argv[1]))
+    generate_paper(str(sys.argv[1]))
 else:
     pass
